@@ -1,0 +1,8 @@
+# Секретов здесь нет и быть не должно: вход на сервер идёт через Google, а кого
+# пускать, решает список менеджеров на сервере. Заголовок Authorization здесь —
+# ошибка: заданный явно, он перекрывает вход через Google.
+
+[mcp_servers.qmedia_projects]
+url = "https://projects-mcp.tech.qmedia.by/mcp"
+startup_timeout_sec = 45
+tool_timeout_sec = 120

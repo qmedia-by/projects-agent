@@ -1,0 +1,11 @@
+interface:
+  display_name: "Часы по проекту"
+  short_description: "Затрекано, план и факт, разбивка по работам"
+  default_prompt: "Используй $project-hours, чтобы показать часы по проекту."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "qmedia_projects"
+      description: "MCP-сервер проектов qmedia"
+      transport: "streamable_http"

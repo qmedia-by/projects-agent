@@ -1,0 +1,13 @@
+{
+  "name": "projects-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Инструкции и скиллы для агента, отвечающего на вопросы о проектах qmedia",
+  "scripts": {
+    "test": "node scripts/lint-skills.mjs && node scripts/test-skill-rules.mjs && node scripts/check-config.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

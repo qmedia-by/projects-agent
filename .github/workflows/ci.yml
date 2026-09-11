@@ -1,0 +1,28 @@
+name: CI
+
+# Только pull request в dev, пока он открыт: при создании, на каждый push в ветку и
+# при переоткрытии. dev — ветка, за которой следуют копии всех Менеджеров: всё, что
+# туда попало, приходит к ним в начале следующего чата, поэтому проверка — до слияния.
+#
+# После слияния в dev ничего не гоняется. Это безопасно, только пока в GitHub включено
+# требование держать ветку PR актуальной перед слиянием: иначе два PR, прошедшие
+# проверку по отдельности, могут сломать dev вместе.
+on:
+  pull_request:
+    branches: [dev]
+    types: [opened, synchronize, reopened]
+
+# Три push подряд — значение имеет только результат последнего.
+concurrency:
+  group: ci-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm test

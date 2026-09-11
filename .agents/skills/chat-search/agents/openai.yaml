@@ -1,0 +1,11 @@
+interface:
+  display_name: "Поиск в переписке"
+  short_description: "Что обсуждали с клиентом в Telegram"
+  default_prompt: "Используй $chat-search, чтобы найти нужное в переписке с клиентом."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "qmedia_projects"
+      description: "MCP-сервер проектов qmedia"
+      transport: "streamable_http"

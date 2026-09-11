@@ -1,0 +1,11 @@
+interface:
+  display_name: "Подключение к серверу"
+  short_description: "Вход через Google и ошибки MCP"
+  default_prompt: "Используй $connection-doctor, чтобы подключить сервер проектов или найти причину сбоя."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "qmedia_projects"
+      description: "MCP-сервер проектов qmedia"
+      transport: "streamable_http"

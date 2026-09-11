@@ -1,0 +1,11 @@
+interface:
+  display_name: "Пробелы в данных"
+  short_description: "Почему данных нет и как это исправить"
+  default_prompt: "Используй $data-gaps, чтобы разобраться, почему по проекту не хватает данных."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "qmedia_projects"
+      description: "MCP-сервер проектов qmedia"
+      transport: "streamable_http"

@@ -1,0 +1,11 @@
+interface:
+  display_name: "Что горит"
+  short_description: "Просроченное, зависшее и чаты без ответа"
+  default_prompt: "Используй $attention, чтобы показать, что требует внимания по моим проектам."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "qmedia_projects"
+      description: "MCP-сервер проектов qmedia"
+      transport: "streamable_http"

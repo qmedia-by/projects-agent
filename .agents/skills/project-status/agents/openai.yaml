@@ -1,0 +1,11 @@
+interface:
+  display_name: "Сводка по проекту"
+  short_description: "Задачи, часы и переписка по проекту"
+  default_prompt: "Используй $project-status, чтобы собрать сводку по проекту."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "qmedia_projects"
+      description: "MCP-сервер проектов qmedia"
+      transport: "streamable_http"
