@@ -19,12 +19,14 @@ Use when the Manager wants to know what needs action now.
 
 `stale_days` defaults to 14. Change it only when the Manager names a different threshold.
 
+**Tasks are the development team's by default.** A client project's Bitrix group also holds SEO, PPC and Target sprints; the server shows only tasks whose responsible person logs hours in the DEV Timesheet, and says how many it left out. Pass `all_departments=true` only when the Manager explicitly asks about other departments («включая SEO», «по всем отделам») — never to make a short list look fuller. When the answer says tasks of other departments are hidden, repeat that count in one line.
+
 ## What the sections mean
 
 | Section | Meaning | Caveat |
 |---|---|---|
 | Просроченные задачи | active tasks past their deadline | a deadline nobody moved is still overdue here |
-| Без движения больше N дней | active tasks unchanged for N days, overdue ones excluded | may be waiting on the client — a signal, not a failure |
+| Без движения больше N дней | active tasks unchanged for N days, overdue ones and tasks with open subtasks excluded | may be waiting on the client — a signal, not a failure |
 | Ждут приёмки больше 3 дней | tasks awaiting acceptance for more than 3 days | someone has to accept or return them |
 | Чаты без ответа | the last message in a project chat is not from an employee, older than a day, within two weeks | the answer may have happened by phone or in another chat |
 
