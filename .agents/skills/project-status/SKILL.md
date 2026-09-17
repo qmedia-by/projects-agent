@@ -35,7 +35,7 @@ Most status questions are answered by this call alone. Go further only when the 
 - «Группа общая с: …» means the tasks belong to several projects together. Say that the task figures cover all of them.
 - «найдена по названию» means the group link rests on the group's name, not on tasks from the timesheet. Mention it if the task numbers look wrong to the Manager.
 - CRM deals are not in the overview. Asked about deals or payments by CRM, say the server has no CRM data.
-- Task figures cover the development team only — responsible people who log hours in the DEV Timesheet; tasks of SEO, PPC, Target, SMM or GEO sprints count only once development hours were logged on them. The overview says how many open tasks of other departments (SEO, PPC, Target) it left out; mention that count, and call `project_overview` with `all_departments=true` only when the Manager asks about those departments. A task with open subtasks is not counted as stale: the work happens in the subtasks.
+- Task figures cover the development team only — responsible people who log hours in the DEV Timesheet; tasks of SEO, PPC, Target, SMM or GEO sprints count only once development hours were logged on them, and a task whose own title starts with «DEV:» always counts. The overview says how many open tasks of other departments (SEO, PPC, Target) it left out; mention that count, and call `project_overview` with `all_departments=true` only when the Manager asks about those departments. A task with open subtasks is not counted as stale: the work happens in the subtasks.
 - Stale and awaiting-acceptance counts are signals, not verdicts. A task untouched for two weeks may simply be waiting on the client; do not invent a reason.
 
 ## Output

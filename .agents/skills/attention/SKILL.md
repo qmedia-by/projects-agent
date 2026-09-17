@@ -19,7 +19,7 @@ Use when the Manager wants to know what needs action now.
 
 `stale_days` defaults to 14. Change it only when the Manager names a different threshold.
 
-**Tasks are the development team's by default.** A client project's Bitrix group also holds SEO, PPC and Target sprints; the server shows only tasks whose responsible person logs hours in the DEV Timesheet — except tasks of SEO, PPC, Target, SMM or GEO sprints that nobody has logged development hours on — and says how many it left out. Pass `all_departments=true` only when the Manager explicitly asks about other departments («включая SEO», «по всем отделам») — never to make a short list look fuller. When the answer says tasks of other departments are hidden, repeat that count in one line.
+**Tasks are the development team's by default.** A client project's Bitrix group also holds SEO, PPC and Target sprints; the server shows only tasks whose responsible person logs hours in the DEV Timesheet — except tasks of SEO, PPC, Target, SMM or GEO sprints that nobody has logged development hours on, and always including a task whose own title starts with «DEV:» — and says how many it left out. Pass `all_departments=true` only when the Manager explicitly asks about other departments («включая SEO», «по всем отделам») — never to make a short list look fuller. When the answer says tasks of other departments are hidden, repeat that count in one line.
 
 ## What the sections mean
 
