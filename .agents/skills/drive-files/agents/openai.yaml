@@ -1,0 +1,11 @@
+interface:
+  display_name: "Файлы на Диске"
+  short_description: "Регламенты, папки пресейлов и проектов, отчётность"
+  default_prompt: "Используй $drive-files, чтобы найти и прочитать файл на Google Диске."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "qmedia_projects"
+      description: "MCP-сервер проектов qmedia"
+      transport: "streamable_http"

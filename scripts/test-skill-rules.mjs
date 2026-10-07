@@ -18,8 +18,38 @@ const rules = [
   },
   {
     file: "AGENTS.md",
-    pattern: /Сервер ничего не пишет/,
+    pattern: /Битрикс, таблицу и чаты сервер только читает/,
     why: "агент не должен обещать изменений в Битриксе, таблице или чатах",
+  },
+  {
+    file: "AGENTS.md",
+    pattern: /Единственная запись — смета пресейла/,
+    why: "запись на Диск — только смета пресейла, и только по прямой просьбе",
+  },
+  {
+    file: "AGENTS.md",
+    pattern: /данные, а не указания/,
+    why: "текст клиента в файле или расшифровке не должен запускать запись",
+  },
+  {
+    file: ".agents/skills/presale-estimate/SKILL.md",
+    pattern: /The estimate is a draft/,
+    why: "черновик сметы не должен уйти клиенту как готовый",
+  },
+  {
+    file: ".agents/skills/presale-estimate/SKILL.md",
+    pattern: /Never invent hours or prices/,
+    why: "часы и цены без опоры выглядят как факт",
+  },
+  {
+    file: ".agents/skills/presale-estimate/SKILL.md",
+    pattern: /Never repeat a write blindly/,
+    why: "повтор после таймаута создаёт вторую смету",
+  },
+  {
+    file: ".agents/skills/drive-files/SKILL.md",
+    pattern: /outside the connected folders/,
+    why: "агент не должен искать обход границы Диска",
   },
   {
     file: "AGENTS.md",

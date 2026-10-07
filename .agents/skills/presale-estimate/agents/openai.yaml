@@ -1,0 +1,11 @@
+interface:
+  display_name: "Смета пресейла"
+  short_description: "Папка в Пресейлах и смета по шаблону"
+  default_prompt: "Используй $presale-estimate, чтобы подготовить смету пресейла."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "qmedia_projects"
+      description: "MCP-сервер проектов qmedia"
+      transport: "streamable_http"
