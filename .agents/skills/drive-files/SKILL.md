@@ -16,6 +16,7 @@ Only five connected folders: «Пресейлы», «Проекты», «DEV П�
 - `drive_search(query)` looks for all words in names and paths — «example.by смета», «регламент отпуск». `root` narrows to one folder: presales, projects, sales, regulations, pm_reports. `fulltext=true` also searches inside documents and sheets.
 - Names are searched in an index refreshed every 30 minutes. If the Manager says a file was just added, open its folder with `drive_list` — that is live.
 - `drive_list()` shows the connected folders; `drive_list(folder)` — one folder by link, ID or path «Пресейлы/example.by».
+- A path is looked up in the same index. «В индексе Диска ничего нет» for a path is not the boundary: list the parent with `drive_list` (a root by its name, «Пресейлы») and take the ID from that listing.
 - A Project's own file link is in `project_get` («Папка проекта»).
 
 ## Reading
@@ -23,7 +24,7 @@ Only five connected folders: «Пресейлы», «Проекты», «DEV П�
 - `drive_read(file)` — Google Docs as text, sheets and .xlsx by sheet, page by page with `cursor`. Read only as far as the question needs.
 - An estimate reads better with `estimate_read` — rows, totals and errors.
 - .docx and .pdf are not read yet: give the link.
-- Cells pulling external data (`IMPORTRANGE` and the like) come back hidden: say so if the answer depends on them.
+- A sheet that pulls external data (`IMPORTRANGE` and the like) is not read at all: give the link and say why.
 
 ## Rules
 

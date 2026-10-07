@@ -8,8 +8,8 @@ Every template has the same columns: task, hours, specialist level, cost, «Вк
 
 - **Page-type rows** («Главная страница», «Категория каталога», «Карточка товара», …) mean one layout of that type, not one per page. Ten information pages are one «Информационная страница».
 - **Quantity rows** carry the volume in the text: «(2 страницы)», «до 10 страниц», «за 50 товаров», «до 4 блоков». Scale both together: the number in the text and the hours.
-- **Percentage rows** have hours as a formula of the total: «Менеджмент проекта» (20%), «Приемочное тестирование» (10%), «Общее тестирование верстки», «Тестирование кроссбраузерности», «Тестирование адаптивности» (5% of layout each). Switch them on; never set their hours.
-- **Level** stays as in the template unless the input gives a reason (an integration with an accounting system is Senior or TeamLead work).
+- **Percentage rows** — rows whose hours `estimate_read` shows as «(формула)». In custom they are «Менеджмент проекта» (20%), «Приемочное тестирование» (10%), «Общее тестирование верстки», «Тестирование кроссбраузерности», «Тестирование адаптивности» (5% of layout each). Switch them on; never set their hours. In other templates the same names may be plain hours — then scale them like any row, with a reason.
+- **Level** stays as in the template unless the input gives a reason (an integration with an accounting system is Senior or «TeamLead/TechLead» work). Use level names exactly as in «Тарифы» — `estimate_read` prints them. A row you add without a level gets Middle.
 
 ## Base rows by solution
 
@@ -27,9 +27,11 @@ All rows are off in the template. For a new site switch on, even if the client n
 
 The base package (fixed price) is on: it already covers structure, styling, test content up to 10 pages, acceptance, management, training, moving to the client's server and SSL. Add only «Дополнительные работы». «Техническая поддержка. 3 месяца» is on in the template — keep it unless the client declined it.
 
+When you switch on functional rows of «Дополнительные работы» — integrations, payments, a personal account, delivery, languages, rows you add — also switch on «Операционное и модульное тестирование доп. функционала» and raise its hours with the volume of added work, with a reason. Content filling and graphics need no testing row.
+
 ### tilda
 
-Most rows are on in the template. «Наполнение контентом доп. страниц» and «Техническая поддержка» are off: switch on only if asked.
+Most rows are on in the template. «Наполнение контентом доп. страниц» and «Техническая поддержка» are off: switch on only if asked. «Менеджмент проекта» here is plain hours, not a formula: raise it when you add work, with a reason.
 
 ### other — доработки
 
