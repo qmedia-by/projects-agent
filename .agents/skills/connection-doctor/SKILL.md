@@ -42,6 +42,8 @@ The command waits for the browser, so it can outlive the tool timeout. **A timeo
 
 **Signed in, still refused.** The browser flow completed, `codex mcp list` shows `OAuth`, and calls still fail with an authorization error or the server asks to sign in again. This is access, not sign-in: the Google address used is not on the server's managers list — most often a personal account chosen instead of the work one. One action: sign in again with the work account; if it already was the work account, the Manager asks the administrator to add that exact address. Repeating the same sign-in does not help.
 
+**Signed in, no tools.** `codex mcp list` shows `OAuth`, access is fine, and the server's tools are still missing — in a new chat too. The stored login has gone stale: Codex tried to renew it and the server refused the renewal. A new chat alone does not help, because the VS Code extension keeps the old login in memory. One action: sign in again as above, then quit VS Code completely (Cmd+Q on macOS; on Windows close every window) and open a new chat in this folder. Do not answer this state with «open a new chat» only.
+
 **A static key in a config.** An `Authorization` header, `http_headers`, `env_http_headers` or `bearer_token_env_var` for `qmedia_projects` in `~/.codex/config.toml` overrides OAuth, and Codex will not even try to sign in. Report that the line has to go, without printing its value.
 
 **Server unreachable.** Connection errors, timeouts or 5xx on every call while sign-in looks fine. `https://projects-mcp.tech.qmedia.by/health` answering `ok` means the server is up and the fault is local; anything else is a server fault. One action: tell the administrator. Do not suggest signing in again.
