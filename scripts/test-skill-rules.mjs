@@ -81,6 +81,11 @@ const rules = [
     pattern: /never ask the Manager to paste them/,
     why: "токены и заголовки авторизации не показываются и не запрашиваются",
   },
+  {
+    file: ".agents/skills/connection-doctor/SKILL.md",
+    pattern: /quit VS Code completely/,
+    why: "при устаревшем входе новый чат не помогает: нужен новый вход и перезапуск VS Code",
+  },
 ];
 
 const broken = rules.filter((rule) => !rule.pattern.test(read(rule.file)));
